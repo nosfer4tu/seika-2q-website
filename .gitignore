@@ -1,0 +1,5 @@
+# For libraries added to not be tracked
+/node_modules
+
+# For Mac OS to not track the file
+.DS_Store

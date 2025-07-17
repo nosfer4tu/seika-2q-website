@@ -4,52 +4,492 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="particles.json"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="vanilla-tilt.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+        <style>
+            #particles-js {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: #ffffff;
+            }
+            .container {
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                justify-content: center;
+                margin-top: 100px;
+                background-color: rgb(44, 46, 67, 0.85);
+                border-radius: 10px;
+                width: 100%;
+            }
+            .swiper {
+                width: 1000px;
+                height: 500px;
+                img {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .swiper-slide {
+                display: flex !important;
+                justify-content: center;
+                opacity: 0.5;
+            }
+            .swiper-slide:hover {
+                opacity: 1;
+            }
+            .swiper-wrapper {
+                margin-bottom: 100px;
+            }
+            .img2,
+            .img3 {
+                margin-top: 25px;
+            }
+            .swiper-button-prev,
+            .swiper-button-next {
+                position: absolute !important;
+                top: 90% !important;
+                transform: translateY(-50%) !important;
+                background-color: transparent !important;
+                border: 2px solid white !important;
+                border-radius: 50% !important;
+                width: 75px !important;
+                height: 75px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                color: white !important;
+                transition: background-color 0.3s ease !important;
+                opacity: 0.5 !important;
+                z-index: 10 !important;
+            }
+            .swiper-button-prev:hover,
+            .swiper-button-next:hover {
+                opacity: 1 !important;
+            }
+            .swiper-button-prev {
+                left: 80% !important;
+            }
+            .swiper-button-next {
+                margin-right: 125px !important;
+            }
+            .blank-space {
+                padding: 20px;
+                height: 100px;
+            }
+            .close-tab {
+                width: 50px;
+                height: 50px;
+                transition: all 1s;
+                opacity: 0.5;
+                &:hover {
+                    width: 75px;
+                    height: 75px;
+                    opacity: 1;
+                }
+            }
+        </style>
     </head>
     <body>
-        <div class="intro">
-            <p>Colognes I have used before</p>
-        </div>
+        <div
+            id="particles-js"
+            style="
+                background-color: rgb(44, 46, 67);
+                background-image: url('');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            "
+        ></div>
         <div class="container">
-            <div class="cologne">
-                <div class="class">
-                    <img
-                        src="./jazz_club.jpg"
-                        alt=""
-                        width="15%"
-                        height="10%"
-                    />
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="./jazz_club.png"
+                            width="100%"
+                            height="100%"
+                            id="Maison Margiela"
+                            alt="Jazz Club"
+                            data-tilt
+                            data-tilt-scale="1.5"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="./another_13.png"
+                            width="100%"
+                            height="100%"
+                            class="img2"
+                            id="Le Labo"
+                            alt="Another 13"
+                            data-tilt
+                            data-tilt-scale="1.5"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="./aqua_universalis.png"
+                            width="100%"
+                            height="100%"
+                            class="img3"
+                            id="Maison Francis Kurkdjian"
+                            alt="Aqua Universalis"
+                            data-tilt
+                            data-tilt-scale="1.5"
+                        />
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="./lazy_sunday_morning.png"
+                            width="100%"
+                            height="100%"
+                            id="Maison Margiela"
+                            alt="Lazy Sunday Morning"
+                            data-tilt
+                            data-tilt-scale="1.5"
+                        />
+                    </div>
                 </div>
-                <div class="cologne-info">
-                    <h2>Maison Margiela Replica</h2>
-                    <h3>Jazz club</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="cologne">
-                <div class="class"><img src="#" alt="" /></div>
-                <div class="cologne-info">
-                    <h2>Maison Margiela Replica</h2>
-                    <h3>Lazy Sunday Morning</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="cologne">
-                <div class="class"><img src="#" alt="" /></div>
-                <div class="cologne-info">
-                    <h2>Le Labo</h2>
-                    <h3>Another 13</h3>
-                    <p>Description</p>
-                </div>
-            </div>
-            <div class="cologne">
-                <div class="class"><img src="#" alt="" /></div>
-                <div class="cologne-info">
-                    <h2>Maison Francis Kurkdjian</h2>
-                    <h3>Aqua Universalis</h3>
-                    <p>Description</p>
-                </div>
+                <div class="swiper-scrollbar"></div>
             </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="content">
+            <div class="image"></div>
+            <div class="h1"></div>
+            <div class="h2"></div>
+            <div class="h3"></div>
+            <div class="accords"></div>
+            <div class="description"></div>
+            <div class="close_tab"></div>
+        </div>
+        <div class="blank-space"></div>
         <script src="main.js"></script>
+        <script>
+            const content = document.querySelector('.content');
+            const image = document.querySelector('.image');
+            const h1 = document.querySelector('.h1');
+            const h2 = document.querySelector('.h2');
+            const h3 = document.querySelector('.h3');
+            const accords = document.querySelector('.accords');
+            const description = document.querySelector('.description');
+            const close_tab = document.querySelector('.close_tab');
+
+            const fragrances = {
+                'Jazz Club': {
+                    accords: [
+                        'tobacco',
+                        'sweet',
+                        'rum',
+                        'vanilla',
+                        'woody',
+                        'aromatic',
+                        'soft spicy',
+                        'amber',
+                        'powdery',
+                        'warm spicy',
+                    ],
+                    widths: [
+                        100, 88.8863, 83.867, 83.1025, 71.6866, 66.6118,
+                        63.7999, 58.6555, 53, 52.6155,
+                    ],
+                    colors: [
+                        'rgb(173, 119, 39)',
+                        'rgb(238, 54, 59)',
+                        'rgb(172, 32, 5)',
+                        'rgb(255, 254, 192)',
+                        'rgb(119, 68, 20)',
+                        'rgb(55, 160, 137)',
+                        'rgb(226, 119, 82)',
+                        'rgb(188, 77, 16)',
+                        'rgb(238, 221, 204)',
+                        'rgb(204, 51, 0)',
+                    ],
+                    opacities: [
+                        1, 0.90474, 0.861717, 0.855164, 0.757313, 0.713816,
+                        0.689714, 0.585276, 0.53655, 0.533955,
+                    ],
+                    textColors: [
+                        'white',
+                        'white',
+                        'white',
+                        'black',
+                        'white',
+                        'darkslategray',
+                        'darkslategray',
+                        'white',
+                        'darkslategray',
+                        'white',
+                    ],
+                    description: `<strong>A warm, smoky scent that captures the essence of an intimate night out.</strong> <br><br>
+                                Part of Maison Margiela’s iconic REPLICA collection, Jazz Club evokes the atmosphere of a hidden Brooklyn speakeasy,
+                                where the air is filled with the sweet richness of aged rum, the smoky curl of cigars, and the gentle hum of jazz music.<br><br>
+                                The top notes open with a lively mix of pink pepper, lemon, and neroli, leading into a heart of rich rum, vetiver, and clary sage.
+                                As the fragrance settles, base notes of tobacco leaf, vanilla, and styrax create a smooth, long-lasting warmth that lingers like a memory of a soulful night.`,
+                },
+                'Another 13': {
+                    accords: [
+                        'musky',
+                        'amber',
+                        'woody',
+                        'animalic',
+                        'fruity',
+                        'floral',
+                        'powdery',
+                    ],
+                    widths: [
+                        100, 81.3577, 65.6528, 50.6216, 46.8216, 44.8986,
+                        44.6265,
+                    ],
+                    colors: [
+                        'rgb(231, 216, 234)',
+                        'rgb(188, 77, 16)',
+                        'rgb(119, 68, 20)',
+                        'rgb(142, 75, 19)',
+                        'rgb(252, 75, 41)',
+                        'rgb(255, 95, 141)',
+                        'rgb(238, 221, 204)',
+                    ],
+                    opacities: [
+                        1, 0.840209, 0.705595, 0.576757, 0.544185, 0.527702,
+                        0.52537,
+                    ],
+                    textColors: ['black', 'white', 'white', 'white'],
+                    description: `<strong>A hypnotic blend of clean musk and synthetic sensuality.</strong> <br><br>
+                                Created in collaboration with AnOther Magazine, Another 13 is a cult-favorite scent that blurs the line between intimacy and intrigue.
+                                At its core is Ambroxan, a synthetic animalic note that evokes the warmth of skin, the coolness of metal, and the softness of paper — all at once.<br><br>
+                                Balanced with subtle hints of moss, jasmine, ambrette seeds, and pear, this fragrance is clean yet addictive, minimalist yet deeply layered.
+                                It doesn’t announce itself loudly, but rather lingers in the air — haunting and unforgettable.
+                                Each bottle is freshly hand-blended and labeled in Le Labo’s signature apothecary style.`,
+                },
+                'Aqua Universalis': {
+                    accords: [
+                        'citrus',
+                        'white floral',
+                        'fresh',
+                        'musky',
+                        'aromatic',
+                        'green',
+                    ],
+                    widths: [100, 74.9997, 53.4831, 50.7983, 45.1448, 44.1522],
+                    colors: [
+                        'rgb(249, 255, 82)',
+                        'rgb(237, 242, 251)',
+                        'rgb(155, 229, 237)',
+                        'rgb(231, 216, 234)',
+                        'rgb(55, 160, 137)',
+                        'rgb(14, 140, 29)',
+                    ],
+                    opacities: [
+                        1, 0.785712, 0.601283, 0.578271, 0.529813, 0.521305,
+                    ],
+                    textColors: [
+                        'black',
+                        'black',
+                        'gray',
+                        'gray',
+                        'white',
+                        'white',
+                    ],
+                    description: `<strong>A clean, radiant scent that captures the feeling of crisp linen and morning light.</strong> <br><br>
+                                Aqua Universalis by Maison Francis Kurkdjian is a luminous, everyday fragrance designed to feel as natural and effortless as clean skin or freshly laundered cotton.
+                                It opens with vibrant notes of Calabrian bergamot and Sicilian lemon, bringing an immediate sense of brightness and clarity.<br><br>
+                                At its heart, delicate white flowers like lily of the valley and orange blossom add softness and subtle elegance.<br>
+                                The scent finishes with a whisper of light musks and soft woods, creating a fresh, airy trail that lingers with quiet confidence.`,
+                },
+                'Lazy Sunday Morning': {
+                    accords: [
+                        'musky',
+                        'fresh',
+                        'white floral',
+                        'alcehydic',
+                        'rose',
+                        'powdery',
+                        'floral',
+                        'soapy',
+                        'iris',
+                        'sweet',
+                    ],
+                    widths: [
+                        100, 87.3201, 80.4717, 77.9963, 75.0098, 72.5912,
+                        60.3676, 55.1442, 53.196, 49.7256,
+                    ],
+                    colors: [
+                        'rgb(231, 216, 234)',
+                        'rgb(155, 229, 237)',
+                        'rgb(237, 242, 251)',
+                        'rgb(216, 233, 246)',
+                        'rgb(254, 1, 107)',
+                        'rgb(238, 221, 204)',
+                        'rgb(255, 95, 141)',
+                        'rgb(227, 246, 252)',
+                        'rgb(183, 167, 215)',
+                        'rgb(238, 54, 59)',
+                    ],
+                    opacities: [
+                        1, 0.891315, 0.832614, 0.811396, 0.785798, 0.765068,
+                        0.660294, 0.615522, 0.598823, 0.569077,
+                    ],
+                    textColors: [
+                        'black',
+                        'black',
+                        'black',
+                        'black',
+                        'white',
+                        'black',
+                        'gray',
+                        'gray',
+                        'gray',
+                        'white',
+                    ],
+                    description: `<strong>A soft, comforting scent that captures the feeling of fresh sheets and sunlit skin.</strong> <br><br>
+                                Lazy Sunday Morning by Maison Margiela is a gentle, clean fragrance <br>that evokes the calm of a quiet morning in bed.<br>
+                                It opens with light notes of pear and lily of the valley, followed by a soft floral heart of iris and rose.
+                                The scent settles into a smooth base of white musk and ambrette, leaving a delicate, skin-like warmth that lingers all day.`,
+                },
+            };
+            function handleImgClick(e) {
+                const imgSrc = e.target.src;
+                content.style.display = 'flex';
+                content.innerHTML = '';
+                image.innerHTML = '';
+                h1.innerHTML = '';
+                h2.innerHTML = '';
+                h3.innerHTML = '';
+                accords.innerHTML = '';
+                description.innerHTML = '';
+                close_tab.innerHTML = '';
+
+                let img = document.createElement('img');
+                img.src = imgSrc;
+
+                let brand = e.target.id;
+                let name = e.target.alt;
+                let brandName = document.createElement('h1');
+                let cologneName = document.createElement('h2');
+                let accord_text = document.createElement('h3');
+                let close = document.createElement('button');
+                close.classList.add('close-tab');
+                close.innerHTML = 'X';
+
+                close.addEventListener('click', () => {
+                    content.style.display = 'none';
+                });
+
+                brandName.innerHTML = brand;
+                cologneName.innerHTML = name;
+                accord_text.innerHTML = 'Accords';
+                img.src = imgSrc;
+
+                image.appendChild(img);
+                h1.appendChild(brandName);
+                h2.appendChild(cologneName);
+                h3.appendChild(accord_text);
+
+                content.appendChild(image);
+                content.appendChild(h1);
+                content.appendChild(h2);
+                content.appendChild(h3);
+                content.append(close);
+
+                renderFragrance(name);
+
+                content.style = `display : flex; flex direction : column; align-items : center; justify-content : center; height : 75vh; width : 75vw; background-color : white; margin-top : 125px; margin-left : auto; margin-right : auto; border-radius : 10px; padding : 20px; justify-content: center; align-content: center;`;
+                img.style = `width : 50%; height : 50%; object-fit : contain; position : absolute; top : 90%; left : 0%;`;
+                close.style = `position : absolute; top : 100%; left : 80%;  border-radius: 50%; font-size: 24px; cursor: pointer;`;
+                h1.style = `position : absolute; top : 100%; left : 35%;`;
+                h2.style = `position : absolute; top : 110%; left : 35%;`;
+                h3.style = `position : absolute; top : 130%; left : 60%;`;
+                accords.style = `position : absolute; top : 140%; left : 60%; width: 250px; display: inline-block;`;
+
+                image.setAttribute('data-aos-duration', 'ease-in-sine');
+                content.setAttribute('data-aos', 'fade-zoom-in');
+                h1.setAttribute('data-aos', 'fade-zoom-in');
+                h1.setAttribute('data-aos-duration', '2000');
+                h2.setAttribute('data-aos', 'fade-zoom-in');
+                h2.setAttribute('data-aos-duration', '2000');
+                h3.setAttribute('data-aos', 'fade-zoom-in');
+                h3.setAttribute('data-aos-duration', '2000');
+
+                AOS.refresh();
+                AOS.init();
+
+                content.classList.remove('aos-animate');
+                void content.offsetWidth;
+                content.classList.add('aos-animate');
+
+                const durationStr =
+                    window.getComputedStyle(content).transitionDuration ||
+                    '0.4s';
+                const duration = parseFloat(durationStr) * 1000;
+                setTimeout(() => {
+                    new Typed('#typedDescription', {
+                        strings: [fragrances[name].description],
+                        typeSpeed: 5,
+                        loop: false,
+                        showCursor: false,
+                        typeHtml: true,
+                    });
+                }, duration);
+            }
+
+            function renderFragrance(name) {
+                const data = fragrances[name];
+                if (!data) return;
+
+                accords.innerHTML = '';
+                description.innerHTML = '';
+
+                data.accords.forEach((accord, index) => {
+                    let accord_wrapper = document.createElement('div');
+                    accord_wrapper.classList.add('cell.accord-box');
+                    let width = data.widths[index];
+                    let color = data.colors[index];
+                    let accord_bar = document.createElement('div');
+                    accord_bar.classList.add('accord_bar');
+                    accord_bar.innerHTML = accord;
+
+                    accord_bar.style = `width: ${width}%; background-color: ${color}; opacity: ${data.opacities[index]}; color: ${data.textColors[index]}; text-align: center;`;
+                    accord_wrapper.style = `align-items: center; justify-content: center;`;
+
+                    accord_wrapper.appendChild(accord_bar);
+                    accords.appendChild(accord_wrapper);
+
+                    accord_bar.setAttribute('data-aos', 'fade-right');
+                    accord_bar.setAttribute('data-aos-easing', 'ease-in-sine');
+                    accord_bar.setAttribute('data-aos-duration', '1500');
+                });
+                content.appendChild(accords);
+
+                let descElem = document.createElement('p');
+                descElem.id = 'typedDescription';
+                description.appendChild(descElem);
+                content.appendChild(description);
+
+                description.style = `position : absolute; top : 140%; left : 20%; display: block; width: 35%; font-size: 16px;`;
+            }
+            document.querySelectorAll('.swiper-slide img').forEach((img) => {
+                img.addEventListener('click', handleImgClick);
+            });
+        </script>
     </body>
 </html>
